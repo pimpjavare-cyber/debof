@@ -77,6 +77,7 @@ async def send_result(
 @app_commands.choices(obfuscator=[
     app_commands.Choice(name="Auto-detect",     value="auto"),
     app_commands.Choice(name="Luraph 14.x",     value="luraph14"),
+    app_commands.Choice(name="Luauprotect",     value="luaprotect"),
     app_commands.Choice(name="LuaU VMP",        value="luauvmp"),
     app_commands.Choice(name="Luraph (legacy)", value="luraph_legacy"),
     app_commands.Choice(name="Prometheus",      value="prometheus"),
@@ -170,6 +171,7 @@ async def cmd_help(interaction: discord.Interaction):
         name="Supported Obfuscators",
         value=(
             "• Luraph 14.x (current)\n"
+            "• Luauprotect (Luraph + loader)\n"
             "• LuaU VMP\n"
             "• Luraph legacy (≤13.x)\n"
             "• Prometheus / MoonSec V2 / V3\n"
